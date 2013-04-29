@@ -2,6 +2,23 @@ Bucketlist::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  # root :to => 'comment#index'
+# will give me a create option for the comments controller, nothing else
+resources :comments, :only => :create
+resources :todo_items, :only =>[:index, :show]
+
+# resources :comments do
+#   collection do
+#     get 'show'
+#   end
+
+#   member do
+#     post 'create'
+#     get 'new'
+#   end
+# end
+
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

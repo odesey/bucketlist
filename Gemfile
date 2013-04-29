@@ -6,6 +6,12 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pry'
+gem 'database_cleaner'
+
+group :test do
+	gem 'shoulda'
+end
 
 
 # Gems used only for assets and not required

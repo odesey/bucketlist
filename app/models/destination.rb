@@ -1,5 +1,5 @@
 class Destination < ActiveRecord::Base
-  attr_accessible :name, :img_url, :latitude, :longitude
+  attr_accessible :name, :image_url, :latitude, :longitude
   has_many :todo_items
 
   geocoded_by :geolocate
@@ -8,5 +8,4 @@ class Destination < ActiveRecord::Base
   def geolocate
   	"#{self.name}"
   end
-  
 end

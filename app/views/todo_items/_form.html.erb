@@ -1,0 +1,23 @@
+<div class="item-form">
+    
+    <%= form_for TodoItem.new(:destination_id => colbeans), :remote => true do |f| %>
+    <%= f.hidden_field :longitude %>
+    <%= f.hidden_field :latitude %>
+    <%= f.text_field :destination_id %>
+
+
+            <div class="field">
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+            </div>
+
+            <div class="field">
+                <%= f.label :location %>
+                <%= f.text_field :location %>
+            </div>
+
+            <div class="field">
+                <%= f.submit %>
+            </div>
+    <% end %>
+</div>

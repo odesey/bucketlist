@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'pry'
 gem 'database_cleaner'
+gem 'geocoder'
 
 group :test do
 	gem 'shoulda'

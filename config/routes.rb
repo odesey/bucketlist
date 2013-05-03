@@ -4,8 +4,13 @@ Bucketlist::Application.routes.draw do
 
   # root :to => 'comment#index'
 # will give me a create option for the comments controller, nothing else
+
+
 resources :comments, :only => :create
 resources :todo_items, :only =>[:index, :show]
+resources :dstinations, :only => [:create, :index, :show]
+
+root :to => 'destinations#index'
 
 # resources :comments do
 #   collection do

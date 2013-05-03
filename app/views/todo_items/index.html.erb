@@ -1,0 +1,48 @@
+<h1>To Do List</h1>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 800px }
+      body { height: 800px; margin: 0; padding: 0 }
+      #map-canvas { float: right; height: 75%; width: 50%; }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6ZYTVUPqC5THPhI-QaiTF4YMl2fQfOYs&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(40.7399977, -73.9900976),
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+
+  <div id="map-canvas">
+	
+</div>
+
+<div id="search-box"/>
+<input type="text" placeholder="enter a item to search for...."/>
+
+
+</html>
+
+
+<% @items.each do |i| %>
+
+	<%= render i %>
+
+	<% end %>
+
+  <!-- #<%= #render 'destinations/form' %> -->
